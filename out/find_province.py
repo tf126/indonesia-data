@@ -1,10 +1,13 @@
 import json
 import re
+from pathlib import Path
 
-i2p = json.loads(open('mi2p.json', 'r').read())
-d2i = json.loads(open('md2i.json', 'r').read())
-c2i = json.loads(open('mc2i.json', 'r').read())
-p2i = json.loads(open('mp2i.json', 'r').read())
+cwd = Path(__file__).parent
+
+i2p = json.loads(open(cwd / 'mi2p.json', 'r').read())
+d2i = json.loads(open(cwd / 'md2i.json', 'r').read())
+c2i = json.loads(open(cwd / 'mc2i.json', 'r').read())
+p2i = json.loads(open(cwd / 'mp2i.json', 'r').read())
 
 
 def stransform(k):
